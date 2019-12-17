@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_12_17_170945) do
     t.integer "season_episode"
     t.string "title"
     t.string "writer"
-    t.datetime "air_date"
+    t.date "air_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
