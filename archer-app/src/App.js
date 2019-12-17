@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import Episodes from './components/Episodes';
+import FavoritesForm from './components/FavoritesForm'
 import './app/app.css'
 
 import './';
@@ -16,7 +17,7 @@ class App extends Component {
   }
   
   componentDidMount () {
-    fetch('localhost')
+    fetch('http://localhost:3000/')
     .then(response => response.json)
     .then(result => this.setState({episodes: result.episodes}))
   }
@@ -24,10 +25,11 @@ class App extends Component {
 
   
   render(){
-
+      
     return (
       <div className="App">
         <h1 className="ArcherHeading">LAAAANNNNAAAA!</h1>
+        <FavoritesForm />
         <audio 
           ref='audio_tag' 
           crossOrigin src='https://www.thesoundarchive.com/archer-sounds/danger-zone.mp3' 
