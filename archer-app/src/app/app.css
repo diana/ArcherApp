@@ -85,15 +85,16 @@ table {
 #sign-in {
   display: flex;
   flex-flow: column;
-  font-family: 'objektiv-mk2', sans-serif; }
+  font-family: 'Baveuse';
+  background-color: #FDCA40; }
 
 #login-button {
-  background-color: #E2DCDC;
+  background-color: #FDCA40;
   border: none;
-  color: #096E6D;
+  color: #080708;
   font-size: large;
   font-weight: 400;
-  font-family: objektiv-mk2, sans-serif; }
+  font-family: 'Baveuse'; }
 
 #modal {
   margin: auto;
@@ -102,6 +103,65 @@ table {
   outline: 0;
   width: 100%;
   align-content: center;
-  justify-content: center; }
+  justify-content: center;
+  font-family: 'Baveuse';
+  background-color: #FDCA40;
+  font-size: 18pt; }
+
+#fake-button {
+  background-color: #FDCA40;
+  color: #080708;
+  font-family: 'Baveuse';
+  font-size: 12pt; }
+
+.cards-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #3772FF;
+  justify-content: space-around;
+  text-align: center; }
+
+h2 {
+  width: 100%;
+  font-family: 'Baveuse';
+  font-size: 45pt;
+  text-align: center;
+  padding: 5pt;
+  background-color: #DF2935;
+  color: #FDCA40;
+  border: solid;
+  border-width: 2pt;
+  border-color: #080708; }
+
+#card {
+  display: flex;
+  border: solid;
+  border-width: 2pt;
+  border-color: #080708;
+  width: 25%;
+  padding: 10pt;
+  font-family: 'Baveuse';
+  flex-direction: column;
+  margin: 5pt;
+  background-color: #FDCA40;
+  align-items: center;
+  justify-content: space-between; }
+
+#card > p {
+  font-size: 14pt;
+  color: #3772FF;
+  padding: 2px; }
+
+#card > span {
+  font-size: 10pt;
+  color: #080708;
+  padding: 2px; }
+
+#card > h3 {
+  font-size: 20pt;
+  color: #DF2935;
+  padding: 2px; }
 
 /*# sourceMappingURL=app.css.map */
