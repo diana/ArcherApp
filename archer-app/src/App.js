@@ -1,7 +1,5 @@
 import React, { Component} from 'react';
 import Episodes from './components/Episodes';
-import './app/app.css';
-import Users from './components/Users'
 
 
 
@@ -16,7 +14,7 @@ class App extends Component {
   }
   
   componentDidMount () {
-    fetch('localhost')
+    fetch('http://localhost:3000/')
     .then(response => response.json)
     .then(result => this.setState({episodes: result.episodes}))
   }
@@ -78,9 +76,11 @@ class App extends Component {
     }
   
   render(){
-
+      
     return (
+
       <div className="app">
+
 
         <div>
           {this.state.isClicked ? this.createLoginForm() : this.createHeader()}
@@ -88,6 +88,7 @@ class App extends Component {
         <div className="cards-container">
           {this.state.isLoggedIn ? this.createCard() : null}
          </div>
+
 
 
       </div>
