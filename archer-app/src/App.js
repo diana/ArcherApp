@@ -1,7 +1,5 @@
 import React, { Component} from 'react';
 import Episodes from './components/Episodes';
-import './app/app.css';
-import Users from './components/Users'
 
 
 
@@ -15,7 +13,7 @@ class App extends Component {
   }
   
   componentDidMount () {
-    fetch('localhost')
+    fetch('http://localhost:3000/')
     .then(response => response.json)
     .then(result => this.setState({episodes: result.episodes}))
   }
@@ -29,8 +27,9 @@ class App extends Component {
   }
   
   render(){
-
+      
     return (
+
       <div className="app">
         <header className="start-page" >
           <img 
@@ -43,6 +42,7 @@ class App extends Component {
             ref='audio_tag' 
             crossOrigin src='https://www.thesoundarchive.com/archer-sounds/danger-zone.mp3' 
             controls autoPlay
+
           />
         </header>
         {this.state.isLoggedIn ? this.createUser() : null}
