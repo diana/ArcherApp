@@ -68,4 +68,40 @@ table {
   align-self: center;
   margin: 10rem; }
 
+.w3-modal {
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.4); }
+
+#sign-in {
+  display: flex;
+  flex-flow: column;
+  font-family: 'objektiv-mk2', sans-serif; }
+
+#login-button {
+  background-color: #E2DCDC;
+  border: none;
+  color: #096E6D;
+  font-size: large;
+  font-weight: 400;
+  font-family: objektiv-mk2, sans-serif; }
+
+#modal {
+  margin: auto;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  width: 100%;
+  align-content: center;
+  justify-content: center; }
+
 /*# sourceMappingURL=app.css.map */
