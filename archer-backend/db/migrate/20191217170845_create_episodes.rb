@@ -6,7 +6,7 @@ class CreateEpisodes < ActiveRecord::Migration[6.0]
       t.integer :season_episode
       t.string :title
       t.string :writer
-      t.datetime :air_date
+      t.date :air_date
 
       t.timestamps
     end

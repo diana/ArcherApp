@@ -10,11 +10,28 @@ class EpisodesController < ApplicationController
     end
 
     def create
-        episode = Episode.create(name:params[:name])
-        render json: {message: "Added new episode: #{episode.name}"}
+        episode = Episode.create(
+            season:params[:season],
+            overall_episode:params[:overall_episode],
+            overall_episode:params[:overall_episode],
+            title:params[:title],
+            writer:params[:writer],
+            air_date:params[:air_date]
+        )
+        render json: {message: "Added new episode: #{episode.title}"}
     end
 
     def update
+        episode = Episode.find(params[:id])
+        episode.update(
+            season:params[:season],
+            overall_episode:params[:overall_episode],
+            overall_episode:params[:overall_episode],
+            title:params[:title],
+            writer:params[:writer],
+            air_date:params[:air_date]
+        )
+        render json: {message: "Updated episode: #{episode.title}"}
     end
 
     def destroy

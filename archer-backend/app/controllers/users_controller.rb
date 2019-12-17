@@ -15,6 +15,9 @@ class UsersController < ApplicationController
     end
 
     def update
+        user = User.find(params[:id])
+        user.update(name:params[:name])
+        render json: {message: "Updated user: #{user.name}"}
     end
 
     def destroy
