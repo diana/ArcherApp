@@ -1,7 +1,8 @@
 import React, { Component} from 'react';
 import Episodes from './components/Episodes';
+import './app/app.css'
 
-import './App.css';
+import './';
 
 
 class App extends Component {
