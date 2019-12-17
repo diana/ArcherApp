@@ -6,13 +6,23 @@ import './App.css';
 
 class App extends Component {
 
-
-  componentDidMount () {
+  state = {
+    episodes: [
+    {}
+    ]
 
 
   }
-  render() {
+  
+  componentDidMount () {
+    fetch('localhost')
+    .then(response => response.json)
+    .then(result => this.setState({episodes: result.episodes}))
+  }
 
+
+  
+  render(){
 
     return (
       <div className="App">
